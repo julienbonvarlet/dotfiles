@@ -1,5 +1,5 @@
 # Global path
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$HOME/bin:$PATH
 
 # Load Composer tools
 export PATH="$HOME/.composer/vendor/bin:$PATH"
