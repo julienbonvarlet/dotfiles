@@ -35,7 +35,7 @@ alias wip="commit wip"
 alias sudo='sudo '
 
 # Get macOS Software Updates, and update Homebrew, npm and their installed packages and composer global packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew cu -f -a; npm install npm -g; npm update -g; composer global update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew cu -f -a; npm install npm -g; npm update -g'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

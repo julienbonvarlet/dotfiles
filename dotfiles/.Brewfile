@@ -17,6 +17,7 @@ brew 'tree' # List directories in a tree structure
 
 # Development
 brew 'composer'
+brew 'pcre2'
 brew 'php'
 brew 'starship'
 brew 'symfony-cli/tap/symfony-cli'
