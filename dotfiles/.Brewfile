@@ -5,6 +5,9 @@ tap 'homebrew/bundle'
 tap 'buo/cask-upgrade'
 tap 'homebrew/cask-fonts'
 tap 'symfony-cli/tap'
+tap 'shivammathur/php'
+tap 'shivammathur/extensions'
+tap 'clevercloud/tap'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -16,10 +19,15 @@ brew 'nss' # Required for symfony cli local server
 brew 'tree' # List directories in a tree structure
 
 # Development
+brew 'clevercloud/homebrew-tap/clever-tools'
 brew 'composer'
 brew 'pcre2'
 brew 'nvm'
-brew 'php'
+brew 'shivammathur/php/php@8.1'
+brew 'shivammathur/extensions/amqp@8.1'
+brew 'shivammathur/extensions/imagick@8.1'
+brew 'shivammathur/extensions/redis@8.1'
+brew 'shivammathur/extensions/pcov@8.1'
 brew 'starship'
 brew 'symfony-cli/tap/symfony-cli'
 brew 'yarn'
@@ -32,6 +40,7 @@ cask 'beekeeper-studio'
 cask 'docker'
 cask 'font-fira-code'
 cask 'github'
+cask 'insomnia'
 cask 'phpstorm'
 cask 'postman-agent'
 cask 'spectacle'

@@ -105,9 +105,5 @@ export LANG=en_US.UTF-8
 source ~/aliases.zsh
 source ~/path.zsh
 
-# Enable Node Version Manager
-export NVM_DIR=~/.nvm 
-source $(brew --prefix nvm)/nvm.sh
-
 # Enable Starship prompt
 eval "$(starship init zsh)"
