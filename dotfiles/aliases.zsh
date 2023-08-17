@@ -1,18 +1,23 @@
 # Shortcuts
 alias co="cd ~/Code"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+alias l="/opt/homebrew/Cellar/coreutils/9.3/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias meh="echo '¯\_(ツ)_/¯' | pbcopy"
-alias c="clear"
 
 # Symfony
 alias sf="symfony"
 alias con="sf console"
 alias c="sf composer"
 alias cc="con cache:clear"
-alias rmc"rm -rf var/cache var/log"
+alias rmc="rm -rf var/cache var/log"
+
+# Verify CS & PHPStan
+
+# Tools
+alias stan="vendor/bin/phpstan analyse "
+alias cs="vendor/bin/ecs check --fix "
+alias rec="vendor/bin/rector process "
+alias grump="stan && cs"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
@@ -21,11 +26,7 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 alias nfresh="rm -rf node_modules/ yarn.lock && yarn install"
 
 # Git
-alias gs="git status"
-alias gb="git branch"
-alias gc="git checkout"
 alias commit="git add . && git commit -s -m"
-alias force="git push --force"
 alias nah="git clean -df && git reset --hard"
 alias pull="git pull"
 alias push="git push"
@@ -36,7 +37,6 @@ alias sudo='sudo '
 
 # Get macOS Software Updates, and update Homebrew, npm and their installed packages and composer global packages
 alias update='sudo softwareupdate -i -a; brew bundle --cleanup --global -v; brew cu -f -a'
-#alias update='brew bundle --cleanup --global -v; brew cu -f -a'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -75,6 +75,3 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
-# Verify CS & PHPStan
-alias grump="make php-cs-fixer && make phpstan"
